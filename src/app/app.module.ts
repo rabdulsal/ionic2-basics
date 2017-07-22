@@ -16,6 +16,7 @@ import { SettingsPage } from "../pages/settings/settings";
 import { LibraryPage } from "../pages/library/library";
 import { TabsPage } from "../pages/tabs/tabs";
 import { QuotesService } from "../services/quotes";
+import { BackgroundToggleService } from "../services/background_toggle";
 
 @NgModule({
   declarations: [
@@ -47,13 +48,14 @@ import { QuotesService } from "../services/quotes";
     QuotesPage,
     QuotePage,
     SettingsPage,
-    TabsPage
+    TabsPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    QuotesService
+    QuotesService,
+    BackgroundToggleService
   ]
 })
 export class AppModule {}
